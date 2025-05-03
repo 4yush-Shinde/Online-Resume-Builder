@@ -1,0 +1,180 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Resume/CV Builder</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="template2.css">
+    </head>
+    <body>
+    <div class="nav">
+    <button id="cmd" onclick="printpdf()" class="navbtn">Download</button>
+    <form>
+    <input type="hidden" id="custinfo" name="custinfo">
+    <button class="navbtn">Clear</button>
+    </form>
+
+    </div>
+
+    <div class="resume" id="resume">
+        <section id="print">
+             <div class="head">
+                <div class="main">
+                    <span class="name" contenteditable="true">YOUR</span> <span contenteditable="true">NAME</span>
+                    <div class="post" contenteditable="true">YOUR JOB PROFILE</div>
+                </div>
+                <div class="contacts">
+                <span contenteditable="true" class="content">+91 9999888822<br>
+                <span contenteditable="true" class="content">samplemail@email.in<br>
+                <span contenteditable="true" class="content">linkedin/username.com<br>
+                <span contenteditable="true" class="content">sample street-India
+                </div>
+            </div>
+
+            <div class="line"></div>
+            <div class="mainbody">
+                <div class="leftside">
+
+
+
+
+                    <span class="title">PROFILE</span><br><br>
+                    <div contenteditable="true">
+                    Here u can write the basic information about your career like your forte, something about yourself that
+                    you want your interviewer to know. Try to keep it brief and only provide necessary information. Do not include information which is
+                    already written in your resume in some other section.</div><br><br>
+    
+    
+    
+                    <br><br><span class="title">EDUCATION</span><br><br><div>
+                    <div id="education">
+    
+    
+    
+                        <div class="edublock">
+                            <span><input type="checkbox" class="input-checkbox"></span>
+                            <span class="education-head" contenteditable="true">YOUR DEGREE</span>
+                            <div ><span contenteditable="true">Institute name</span> - <span contenteditable="true">Passing Year</span></div>
+                        </div>
+                    </div>
+    
+    
+    
+                    <button id="eduadd" type="button" class="btn btn-success" onclick="addedu()"> Add Education</button>
+                    <button id="edurem" type="button" class="btn btn-danger" onclick="remedu(event)"> Remove Education</button></div><br><br>
+
+
+
+
+
+
+                    <br><br><span class="title">CERTIFICATIONS</span><br><br><div>
+                        <div id="education">
+        
+        
+        
+                            <div class="edublock">
+                                <span><input type="checkbox" class="input-checkbox"></span>
+                                <span class="education-head" contenteditable="true">Certificate Name</span>
+                                <div ><span contenteditable="true">Institute name</span> - <span contenteditable="true">Year of Certification</span></div>
+                            </div>
+                        </div>
+        
+        
+        
+                        <button id="eduadd" type="button" class="btn btn-success" onclick="addedu()"> Add Certificate</button>
+                        <button id="edurem" type="button" class="btn btn-danger" onclick="remedu(event)"> Remove Certificate</button></div><br><br><br>
+
+
+
+
+                        <span class="title">ADDITIONAL SKILLS</span><br><br><div>
+                            <div class="skill"><span><input type="checkbox" class="input-checkbox">Write your skill here</div>
+                            <div id="skills"></div>
+            
+                            <button id="skilladd" type="button" class="btn btn-success" onclick="addskill()"> Add Skill</button>
+                            <button id="skillrem" type="button" class="btn btn-danger" onclick="remskill(event)"> Remove Skill</button></div><br><br>
+                    </div>
+
+
+                    
+
+
+
+                    
+
+
+                    
+    
+    
+    
+    
+
+
+
+
+
+                
+
+                <div class="border"></div>
+                <div class="rightside">
+
+
+
+                    <span class="title">MY SKILLS</span><br><br><div>
+                        <div class="skill"><span><input type="checkbox" class="input-checkbox">Write your skill here</div>
+                        <div id="skills"></div>
+        
+                        <button id="skilladd" type="button" class="btn btn-success" onclick="addskill()"> Add Skill</button>
+                        <button id="skillrem" type="button" class="btn btn-danger" onclick="remskill(event)"> Remove Skill</button></div><br><br>
+        
+        
+        
+                        <br><br><span class="title">LANGUAGES</span><br><br><div>
+                        <div class="language"><span><input type="checkbox" class="input-checkbox">LANGNAME</span> - <span contenteditable="true">level u know</span></div>
+                        <div id="languages"></div>
+        
+                        <button id="langadd" type="button" class="btn btn-success" onclick="addLang()"> Add Language</button>
+                        <button id="langrem" type="button" class="btn btn-danger" onclick="remLang(event)"> Remove Language</button></div><br><br>
+        
+        
+        
+                        <br><br><span class="title">ACHIEVEMENTS</span><br><br><div>
+                        <div class="achieve" ><span><input type="checkbox" class="input-checkbox">Write your achievement</div>
+                        <div id="achievement"></div>
+                        <button id="achadd" type="button" class="btn btn-success" onclick="addAch()"> Add Achievement</button>
+                        <button id="achrem" type="button" class="btn btn-danger" onclick="remAch(event)" style="margin-top: 0;"> Remove Achievement</button></div><br><br>
+                        
+                        
+                        
+                        
+                        <br><br><span class="title">INTERESTS</span><br><br><div>
+                        <div class="achieve" ><span><input type="checkbox" class="input-checkbox"></span><span contenteditable="true">Write interest</span></div>
+                        <div id="interest"></div>
+        
+                        <button id="Intadd" type="button" class="btn btn-success" onclick="addInt()"> Add Interest</button>
+                        <button id="Intrem" type="button" class="btn btn-danger" onclick="remInt(event)"> Remove Interest</button></div>
+                        </div>
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+               
+    </body>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.0/html2pdf.bundle.min.js"></script>
+    <script src="script.js"></script>
+</html>
