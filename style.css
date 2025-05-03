@@ -30,13 +30,13 @@
   .template-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 135px;
+    gap: 115px;
     max-width: 1000px;
     margin: 0 auto;
   }
   
   .template-grid img {
-    width: 100%;
+    width: 120%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
