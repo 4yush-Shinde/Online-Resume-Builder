@@ -29,10 +29,9 @@
   .template-grid {
     display: flex;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 100px;
-    /* max-width: 1000px; */
-    /* margin: 0 auto; */
-    margin-left: 65px
+    gap: 115px;
+    max-width: 1000px;
+    margin: 0 auto;
   }
   
   .template-grid img {
