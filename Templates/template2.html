@@ -24,15 +24,44 @@
         <section id="print">
              <div class="head">
                 <div class="main">
-                    <span class="name" contenteditable="true">YOUR</span> <span contenteditable="true">NAME</span>
+
+
+
+                    <!-- <span class="name" contenteditable="true">YOUR</span> <span contenteditable="true">NAME</span> -->
+                    <span id="user-name" contenteditable="true">YOUR NAME</span>
+
+
+
+
                     <div class="post" contenteditable="true">YOUR JOB PROFILE</div>
                 </div>
+
+
+
+
+
+<!-- 
                 <div class="contacts">
                 <span contenteditable="true" class="content">+91 9999888822<br>
                 <span contenteditable="true" class="content">samplemail@email.in<br>
                 <span contenteditable="true" class="content">linkedin/username.com<br>
                 <span contenteditable="true" class="content">sample street-India
+                </div> -->
+
+
+
+                <div class="contacts">
+                    <div id="user-phone" class="content" contenteditable="true">Phone No.</div>
+                    <div id="user-email" class="content" contenteditable="true">Email</div>
+                    <div id="user-linkedin" class="content" contenteditable="true">LinkedIn</div>
+                    <div id="user-github" class="content" contenteditable="true">GitHub</div>
                 </div>
+                
+
+
+
+
+
             </div>
 
             <div class="line"></div>
@@ -178,5 +207,25 @@
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.0/html2pdf.bundle.min.js"></script>
+
+
+
+    <script>
+        // Retrieve user data from localStorage
+        const userData = JSON.parse(localStorage.getItem("userInfo"));
+      
+        if (userData) {
+          document.getElementById("user-name").textContent = userData.name || "YOUR NAME";
+          document.getElementById("user-phone").textContent = "Phone: " + (userData.phone || "");
+          document.getElementById("user-email").textContent = "Email: " + (userData.email || "");
+          document.getElementById("user-linkedin").textContent = "LinkedIn: " + (userData.linkedin || "");
+          document.getElementById("user-github").textContent = "GitHub: " + (userData.github || "");
+        }
+      </script>
+
+
+
+
+
     <script src="script.js"></script>
 </html>

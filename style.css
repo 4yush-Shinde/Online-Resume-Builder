@@ -29,14 +29,14 @@
   .template-grid {
     display: flex;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 50px;
+    gap: 70px;
     /* max-width: 1000px; */
     /* margin: 0 auto; */
     margin-left: 65px
   }
   
   .template-grid img {
-    width: 80%;
+    width: 100%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);

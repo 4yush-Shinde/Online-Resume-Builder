@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Info</title>
+  <link rel="stylesheet" href="userinfo.css" />
+</head>
+<body>
+
+
+  <div class="main">
+
+  <div class="heading">
+  <h1>Online Resume Builder</h1>
+  </div>
+
+
+
+  <div class="form-container">
+    <h2>Enter Your Details</h2>
+    <form id="userForm">
+      <input type="text" id="name" placeholder="Full Name" required />
+      <input type="email" id="email" placeholder="Email Address" required />
+      <input type="tel" id="phone" placeholder="Phone Number" required />
+      <input type="url" id="linkedin" placeholder="LinkedIn Profile Link" />
+      <input type="url" id="github" placeholder="GitHub Profile Link" />
+      <button type="submit">Continue to Templates</button>
+    </form>
+  </div>
+
+
+</div>
+
+
+
+  <script>
+    document.getElementById("userForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      // Store data in localStorage
+      localStorage.setItem("userInfo", JSON.stringify({
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        phone: document.getElementById("phone").value,
+        linkedin: document.getElementById("linkedin").value,
+        github: document.getElementById("github").value
+      }));
+      window.location.href = "index.html"; // redirect to your landing page
+    });
+  </script>
+</body>
+</html>

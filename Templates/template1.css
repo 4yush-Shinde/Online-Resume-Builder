@@ -54,7 +54,12 @@ body{
     margin-left: 180px;
 }
 
+#user-name{
+    font-size: 55px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 500;
 
+}
 
 .head .main .name
 {
