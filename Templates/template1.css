@@ -51,6 +51,7 @@ body{
 {
     display: grid;
     grid-template-columns: 3fr 1.5fr;
+    margin-left: 180px;
 }
 
 
@@ -58,7 +59,7 @@ body{
 .head .main .name
 {
     font-size: 55px;
-    font-family: 'Raleway', sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     
 }
 
@@ -68,16 +69,21 @@ body{
 {
     color: rgb(100, 100, 100);
     font-size: 55px;
-    font-family: 'Raleway', sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     margin-left: 5px;
 }
 
 
+.post{
+    margin-left: 50px;
+}
+
 
 .head .main .post
 {
-font-family: 'Barlow', sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
 
 
 .head .contacts

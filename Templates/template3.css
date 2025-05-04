@@ -59,7 +59,7 @@ body{
 {
     font-size: 55px;
     font-family: 'Playfair Display', serif;
-
+    margin-left: 120px;
 }
 
 
@@ -72,7 +72,9 @@ body{
     margin-left: 5px;
 }
 
-
+.post{
+    margin-left: 140px;
+}
 
 .head .main .post
 {
@@ -111,14 +113,16 @@ font-family: 'Playfair Display', serif;
     height: 0.5px;
     background-color: rgb(87, 87, 87);
     margin: 25px 0;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
 }
 
-
+.mainbody2{
+    display: flex;
+}
 
 .mainbody
 {
-    display: grid;
+    /* display: grid; */
     grid-template-columns: 10fr 1fr 17fr;
     height: 900px;
 }
@@ -139,6 +143,12 @@ font-family: 'Playfair Display', serif;
 .mainbody .rightside
 {
     padding-left: 50px;
+    
+}
+
+
+.rightside{
+    margin-left: 50px;
 }
 
 
